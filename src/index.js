@@ -1,47 +1,91 @@
+document.addEventListener("DOMContentLoaded", start)
 
-document.querySelector(".menu-toggle").addEventListener("click", animateBars);
+function start(){
 
-var line1__bars = document.querySelector(".line1__bars-menu");
-var line2__bars = document.querySelector(".line2__bars-menu");
-var line3__bars = document.querySelector(".line3__bars-menu");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+    const links = document.querySelectorAll('.menu a');
+    const navbarHeight = document.querySelector('nav').offsetHeight;
 
-function animateBars(){
-    line1__bars.classList.toggle("activeline1__bars-menu");
-    line2__bars.classList.toggle("activeline2__bars-menu");
-    line3__bars.classList.toggle("activeline3__bars-menu");
-    document.querySelector('.menu').classList.toggle('open');
+    function toggleMenu() {
+        menu.classList.toggle('open');
+        document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
 
-    // Manejo del scroll
-    if (document.querySelector('.menu').classList.contains('open')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = '';
+        menuToggle.querySelector(".line1__bars-menu").classList.toggle("activeline1__bars-menu");
+        menuToggle.querySelector(".line2__bars-menu").classList.toggle("activeline2__bars-menu");
+        menuToggle.querySelector(".line3__bars-menu").classList.toggle("activeline3__bars-menu");
     }
-};
-const dynamicText= document.querySelector("h1 span");
-const words= ["Catherin Romero", "Backend Developer", "Frontend Developer", "innovative", "self-taught" ]
 
-let worIndex= 0;
-let charIndex= 0;
-let isDeleting= false;
+    menuToggle.addEventListener("click", toggleMenu);
 
-const typeEffect = () => {
-    const currentWord= words[worIndex];
-    const currentChar= currentWord.substring(0, charIndex);
-    dynamicText.textContent= currentChar;
-    dynamicText.classList.add("stop-blinking");
+    function scrollToTarget(targetElement) {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
-    if(!isDeleting && charIndex < currentWord.length) {
-        charIndex++;
-        setTimeout(typeEffect, 75);
-    } else if (isDeleting && charIndex > 0 ){
-        charIndex--;
-        setTimeout(typeEffect, 40);
-    } else {
-        isDeleting= !isDeleting;
-        dynamicText.classList.remove("stop-blinking");
-        worIndex= !isDeleting ? (worIndex + 1) % words.length : worIndex;
-        setTimeout(typeEffect, 1200);
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
     }
+
+    function closeMenu() {
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+    }
+
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); 
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetId === '#home') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                scrollToTarget(targetElement);
+            }
+            closeMenu(); 
+        });
+    });
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+    });
+    
+    function titleAnimation(){
+        const dynamicText= document.querySelector("h1 span");
+        const words= ["Catherin Romero", "Backend Developer", "Frontend Developer", "innovative", "self-taught" ]
+    
+        let worIndex= 0;
+        let charIndex= 0;
+        let isDeleting= false;
+    
+        const typeEffect = () => {
+            const currentWord= words[worIndex];
+            const currentChar= currentWord.substring(0, charIndex);
+            dynamicText.textContent= currentChar;
+            dynamicText.classList.add("stop-blinking");
+    
+            if(!isDeleting && charIndex < currentWord.length) {
+                charIndex++;
+                setTimeout(typeEffect, 75);
+            } else if (isDeleting && charIndex > 0 ){
+                charIndex--;
+                setTimeout(typeEffect, 40);
+            } else {
+                isDeleting= !isDeleting;
+                dynamicText.classList.remove("stop-blinking");
+                worIndex= !isDeleting ? (worIndex + 1) % words.length : worIndex;
+                setTimeout(typeEffect, 1200);
+            }
+        }
+        typeEffect();
+    }
+    titleAnimation()
+
 }
-typeEffect();
+

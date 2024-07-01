@@ -7,14 +7,14 @@
     <title>Catherin Romero - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" 
     rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" 
     rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body  class="roboto-regular">
     <nav>
             <div class="logo cinzel-decorative-regular">CR</div>
             <div class="menu-toggle">
@@ -23,7 +23,7 @@
                 <span class="line3__bars-menu"></span>
             </div>
 
-        <ul class="menu">
+        <ul id="home" class="menu roboto-regular">
             <li><a href="#home">Home</a></li>
             <li><a href="#about-me">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -32,9 +32,19 @@
         </ul>
     </nav>
 
-    <header id="home" class="titles">
-        <h2>¡Hi there!</h2>
+    <header class="titles">
+        <h2 class="roboto-regular">¡Hi there!</h2>
         <h1 class="spectral-extrabold">I'm <span></span></h1>
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </header>
 
     <section id="about-me">
@@ -127,6 +137,7 @@
             </div>
         </div>
     </section>
+
 
     <script src="index.js"></script>   
 </body>
