@@ -47,15 +47,19 @@ nav {
     right: 0;
     background-color: #131432;
     padding: 1rem 10px;
+    z-index: 1;
 }
 header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh; 
-    z-index: 1; 
+    position: relative;
 }
-
+/* .box {
+    z-index: 1;
+    position: absolute;
+} */
 .box ul li{
     position: absolute;
     width: 35px;
@@ -65,8 +69,9 @@ header{
     background: radial-gradient(#57a1d5, transparent, transparent);
     bottom: 0;
     left: 10vw;
-    animation: animate 10s linear infinite;
+    animation: animate 12s linear infinite;
     pointer-events: none;
+    z-index: 1;
 }
 .box ul li:nth-child(2){
     left: 37vw;
@@ -77,12 +82,12 @@ header{
     animation-delay: 4s;
 }
 .box ul li:nth-child(4){
-    left: 60vw;
+    left: 55vw;
     animation-delay: 6s;
 }
 .box ul li:nth-child(5){
-    left: 75vw;
-    animation-delay: 4s;
+    left: 70vw;
+    animation-delay: 8s;
 }
 @keyframes animate {
     0% {
@@ -91,11 +96,42 @@ header{
         bottom: 0;
     }
     100%{
-        transform: scale(10);
+        transform: scale(10) translateX(-20%);
         opacity: 0;
         bottom: 100vh; 
     }
 }
+.box-arrows {
+    position: absolute;
+    left: 50%;
+    top:85% ;
+    transform: translate(-50%, -50%);
+    
+}
+.box-arrows span{
+    display: inline-block;
+    width: 3px;
+    height: 28px;
+    background:white;
+    border-radius:2px;
+    margin: 6px;
+    animation: move 1.1s infinite ease-in-out;
+    z-index: 2; 
+  }
+.box-arrows span:nth-of-type(1){
+transform: rotate(-45deg);
+}
+
+.box-arrows span:nth-of-type(2){
+transform: rotate(45deg);
+}
+
+@keyframes move{
+0%{margin-top:0;}
+50%{margin-top:30px;}
+100%{margin-top:0;}
+}
+
 
 .logo {
     font-size: 35px;
