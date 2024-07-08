@@ -87,5 +87,22 @@ function start(){
     }
     titleAnimation()
 
+    function handleScroll() {
+
+        const arrowBox = document.querySelector('.box-arrows');
+        const aboutMeSection = document.getElementById('about-me');
+    
+        const aboutMeRect = aboutMeSection.getBoundingClientRect();
+
+        if (aboutMeRect.top >= 0 && aboutMeRect.top <= window.innerHeight) {
+            arrowBox.style.display = 'none';
+        } else {
+            arrowBox.style.display = 'block';
+        }
+    }
+
+        window.addEventListener('scroll', handleScroll);
+
+        handleScroll();
 }
 
