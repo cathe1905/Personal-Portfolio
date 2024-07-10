@@ -254,11 +254,12 @@ h1 span.stop-blinking::before {
 }
 
 /* About me seccion*/
-.left h2{
+/* .left h2{
     margin: 2rem 0 2rem 0;
-}
+} */
 .subtitules{
     text-align: center;
+    margin: 3rem 0 3rem 0;
 }
 .div-borde{
     position: relative;
@@ -285,10 +286,10 @@ h1 span.stop-blinking::before {
     border: 5px solid var(--shakespeare);
     box-sizing: border-box; 
 }
-.right{
+.p-about-me{
     margin: 1rem;
 }
-.right p{
+.p-about-me p, .p-project{
     margin: 0 auto;
     font-weight: 300;
     font-size: 1rem;
@@ -299,7 +300,8 @@ h1 span.stop-blinking::before {
     padding: .8rem 1rem .8rem 1rem;
     border-radius: .5rem;
     color: white;
-    font-weight: 800;
+    font-weight: 500;
+    font-size: 0.8rem;
 }
 .resume-en{
     background: rgb(87,161,213);
@@ -316,6 +318,36 @@ h1 span.stop-blinking::before {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+}
+
+/* project section */
+.container-project{
+    margin: 1rem;
+}
+.title-project{
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--shakespeare);
+    margin-bottom: 1rem;
+}
+.name-project{
+    margin-bottom: .5rem;
+}
+.borde-img-project {
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 4rem auto;
+}
+
+.img-project{
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translate(20px, 20px); 
+    z-index: 0;  
 }
 
 

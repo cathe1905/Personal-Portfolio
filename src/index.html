@@ -53,15 +53,15 @@
 
     <section id="about-me">
         <div class="container">
-            <div class="left">
-                <h2 class="subtitules">About Me</h2>
+            <div class="h-about-me">
+                <h2 class="subtitules">ABOUT ME</h2>
                 <div class="div-borde">
                     <img src="img/IMG_20240526_121956_732.jpg" class="profile-image" alt="Profile Image">
                     <div class="borde"></div>
                 </div>
 
             </div>
-            <div class="right">
+            <div class="p-about-me">
                 <p>Hello! I'm Catherin Romero, a passionate technology enthusiast with experience in both frontend and 
                     backend projects. My focus is primarily on backend development and databases, specializing in projects 
                     using JavaScript and Python, including frameworks like React and Flask. I take pride in developing a 
@@ -72,8 +72,8 @@
                     and  I would love to learn more about your exciting 
                     projects!</p>
                 <div class="buttons-resume">
-                    <button class="resume-en">ENGLISH RESUME</button>
-                    <button class="resume-sp">SPANISH RESUME</button>
+                    <a href="https://docs.google.com/document/d/1snrOgNr04g8gB_iZRmm6fh0EA3T1sfQIqLy__GiWhF0/edit" class="resume-en">ENGLISH RESUME</a>
+                    <a href="https://docs.google.com/document/d/13KXpruvfZCuRYfQLcdgwAVQALjs5PIHU_iwefGx3u0U/edit" class="resume-sp">SPANISH RESUME</a>
                 </div>
 
             </div>
@@ -81,35 +81,46 @@
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="container">
+        <h2 class="subtitules">PROJECTS</h2>
+        <div class="container-project">
             <div class="left">
-                <h2>Project 1</h2>
-                <h3>Project Name 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum, nisl et dictum vehicula, ipsum metus suscipit nisi, a dictum leo justo vel quam.</p>
+                <h3 class="title-project">Project 1</h3>
+                <h3 class="name-project">Taxi Data Api</h3>
+                <p class="p-project">Developed a Flask-based RESTful API providing access to taxi and trajectory data. 
+                Implemented endpoints for retrieving taxi and trajectory information, user CRUD operations, 
+                and data export to Excel via email. Utilized technologies including Flask, SQLAlchemy for ORM, 
+                JWT for authentication, and Pandas for data manipulation. Using PyTest and UnitTest for error 
+                handling.</p>
             </div>
-            <div class="right">
-                <img src="project1.jpg" alt="Project 1 Image">
+            <div class="right borde-img-project">
+                <img class="img-project" src="img/325603003-a6bd8631-244d-4d9b-a297-2519d9313855.gif" alt="Project 1 Image">
+                <div class="borde"></div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-project">
             <div class="right">
-                <h2>Project 2</h2>
-                <h3>Project Name 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum, nisl et dictum vehicula, ipsum metus suscipit nisi, a dictum leo justo vel quam.</p>
+                <h3 class="title-project">Project 2</h3>
+                <h3 class="name-project">Teresa Store</h3>
+                <p class="p-project">JavaScript, CSS, Bootstrap, Git, Github. Achievements: Mastery of vanilla JavaScript, ability
+                to work with APIs, experience in using Bootstrap for UI design, development of business logic 
+                and data filtering skills.</p>
             </div>
-            <div class="left">
-                <img src="project2.jpg" alt="Project 2 Image">
+            <div class="left borde-img-project">
+                <img class="img-project" src="img/teresa.png" alt="Project 2 Image">
+                <div class="borde"></div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-project">
             <div class="left">
-                <h2>Project 3</h2>
-                <h3>Project Name 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum, nisl et dictum vehicula, ipsum metus suscipit nisi, a dictum leo justo vel quam.</p>
+                <h3 class="title-project">Project 3</h3>
+                <h3 class="name-project">Dataverse Chat</h3>
+                <p class="p-project">Technologies: JavaScript, CSS, Jest, Git, Github, Figma. Achievements: Mastery of Fetch API and 
+                remote data manipulation, development of design skills with Figma, significant improvement in unit 
+                testing with Jest.</p>
             </div>
-            <div class="right">
-                <img src="project3.jpg" alt="Project 3 Image">
+            <div class="right borde-img-project">
+                <img class="img-project" src="img/Captura de pantalla 2024-07-10 130120.png" alt="Project 3 Image">
+                <div class="borde"></div>
             </div>
         </div>
         <button>View All Projects</button>
