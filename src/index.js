@@ -104,5 +104,29 @@ function start(){
         window.addEventListener('scroll', handleScroll);
 
         handleScroll();
-}
+
+        document.querySelectorAll('.div-read-more').forEach(button => 
+            button.addEventListener('click', readMore)
+        );
+        
+        function readMore(e) {
+            e.preventDefault();
+        
+            const button = e.target.closest('.div-read-more');
+            const projectClass = button.querySelector('img').classList[2];
+            
+            const moreInfoClass = `more-info-${projectClass}`;
+            const moreInfoClass1 = `more-info-${projectClass}1`;
+            const textElement = button.querySelector(`.${projectClass}-p`);
+            const moreInfoElement = document.querySelector(`.${moreInfoClass1}`);
+        
+            moreInfoElement.classList.toggle(moreInfoClass);
+            
+            if (moreInfoElement.classList.contains(moreInfoClass)) {
+                textElement.textContent = 'Read More';
+            } else {
+                textElement.textContent = 'Read Less';
+            }
+        }
+    }
 

@@ -254,9 +254,7 @@ h1 span.stop-blinking::before {
 }
 
 /* About me seccion*/
-/* .left h2{
-    margin: 2rem 0 2rem 0;
-} */
+
 .subtitules{
     text-align: center;
     margin: 3rem 0 3rem 0;
@@ -348,6 +346,24 @@ h1 span.stop-blinking::before {
     display: block;
     transform: translate(20px, 20px); 
     z-index: 0;  
+}
+.div-read-more{
+    display: flex;
+    justify-content: left;
+}
+
+.arrow-read{
+    width: 10px;
+    height: auto;
+    margin-right: 8px;
+}
+.div-read-more p{
+    font-size: .8rem;
+    font-weight: 300;
+    color: white;
+}
+.more-info-taxi, .more-info-teresa {
+    display: none;
 }
 
 
