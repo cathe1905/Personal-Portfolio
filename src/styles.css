@@ -362,8 +362,15 @@ h1 span.stop-blinking::before {
     font-weight: 300;
     color: white;
 }
-.more-info-taxi, .more-info-teresa {
+.more-info-taxi, .more-info-teresa, .more-info-chat, 
+.more-info-text, .more-info-portfolio, .more-info-movie,
+.more-info-trivia, .more-info-guess, .more-info-all {
     display: none;
+}
+
+.button-all-projects{
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
 
