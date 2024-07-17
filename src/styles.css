@@ -370,7 +370,37 @@ h1 span.stop-blinking::before {
 
 .button-all-projects{
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-right: 0px;
+}
+.all-div{
+    display: flex;
+    justify-content: center !important;
+    margin-bottom: 4rem;
+}
+
+/*experience section*/
+.experience-sec{
+    text-align: center;
+}
+.tech-icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+.icon{
+    width: 50px;
+    height: 50px; 
+    margin: 1rem 3rem;
+}
+.div-icon{
+    margin: 1px 0rem;
+}
+.p-icono{
+    margin-bottom: 3rem;
+}
+.skills{
+    margin-bottom: 3.2rem;
 }
 
 

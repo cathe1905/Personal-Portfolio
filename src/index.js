@@ -121,12 +121,23 @@ function start(){
             const moreInfoElement = document.querySelector(`.${moreInfoClass1}`);
         
             moreInfoElement.classList.toggle(moreInfoClass);
-            
-            if (moreInfoElement.classList.contains(moreInfoClass)) {
+
+            if(moreInfoElement === document.querySelector('.more-info-all1')){
+                if(moreInfoElement.classList.contains(moreInfoClass)){
+                    textElement.textContent = 'View all projects';
+                    return
+                } else{
+                    textElement.textContent = 'View less projects';
+                    return
+                }
+            } else if(moreInfoElement.classList.contains(moreInfoClass)) {
                 textElement.textContent = 'Read More';
             } else {
                 textElement.textContent = 'Read Less';
             }
+            
         }
+
+    
     }
 
