@@ -359,50 +359,51 @@
         </div>
     </section>
     
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="container">
-            <div class="left">
-                <h2>Drop me a message</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum, nisl et dictum vehicula, ipsum metus suscipit nisi, a dictum leo justo vel quam.</p>
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="icon"></i>
-                        <p>Contact Description 1</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="icon"></i>
-                        <p>Contact Description 2</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="icon"></i>
-                        <p>Contact Description 3</p>
+    <div class="contactos">
+        <div class="izquierda"></div>
+        <div class="derecha"></div>
+        <section id="contact" >
+            <h2 class="contact-t">CONTACT</h2>
+            <div class="container">
+                <div class="left">
+                    <h2 class="drop">Drop me a message</h2>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <img class="icon-contact" src="img/mail.png" alt="">
+                            <p>catherinr24@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <img class="icon-contact" src="img/phone.png" alt="">
+                            <p>+56-933127878</p>
+                        </div>
+                        <div class="info-item">
+                            <img class="icon-contact" src="img/ubicacion.png" alt="">
+                            <p>Santiago de Chile, Región Metropolitana</p>
+                        </div>
                     </div>
                 </div>
+                <div class="right">
+                    <form>
+                        <input class="field" type="text" id="name" name="name" placeholder="Name">
+                        <input class="field" type="email" id="email" name="email" placeholder="E-mail">
+                        <textarea class="field t-area" id="message" placeholder="Message" name="message"></textarea>
+                        <button class="send-button" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="left">
+                <p>&copy; 2024 Catherin Romero. All rights reserved.</p>
             </div>
             <div class="right">
-                <form>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
-                    <button type="submit">Send</button>
-                </form>
+                <!-- Add your social media icons here -->
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
 
 
     <script src="index.js"></script>   
 </body>
-    <footer>
-        <div class="left">
-            <p>&copy; 2024 Catherin Romero. All rights reserved.</p>
-        </div>
-        <div class="right">
-            <!-- Add your social media icons here -->
-        </div>
-    </footer>
+</html>

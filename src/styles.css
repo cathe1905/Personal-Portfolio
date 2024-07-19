@@ -403,6 +403,100 @@ h1 span.stop-blinking::before {
     margin-bottom: 3.2rem;
 }
 
+/* contact section */
+.contactos {
+    background: rgb(85,26,219);
+    background: linear-gradient(90deg, rgba(85,26,219,1) 0%, rgba(87,161,213,1) 100%);
+    position: relative;
+    border-radius: 60px 60px 0 0; 
+    padding: 30px;
+}
+
+.izquierda {
+    position: absolute;
+    top: -60px;
+    left: 0px;
+    width: 80px; 
+    height: 150px; 
+    background: rgb(85,26,219);
+    background: linear-gradient(120deg, rgba(85,26,219,0.7749299548921131) 0%, rgba(87,161,213,1) 100%);
+    -moz-border-radius: 0 100px 100px 0;
+    -webkit-border-radius: 0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
+    opacity: 0.5;
+}
+
+.derecha{
+    position: absolute;
+    width: 80px; 
+    height: 150px; 
+    background: rgb(85,26,219);
+    background: linear-gradient(120deg, rgba(85,26,219,0.7749299548921131) 0%, rgba(87,161,213,1) 100%);
+    border-radius: 100px 0 0 100px;
+    top: -60px;
+    right: 0px;
+    opacity: 0.5;
+}
+
+.contact-t{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.drop{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.info-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.icon-contact{
+    width: 35px;
+    height: 35px;
+    background: rgb(87,161,213);
+    background: linear-gradient(160deg, rgba(87,161,213,1) 50%, rgba(85,26,219,0.464005585144214) 100%);
+    padding: 0.5rem;
+    border-radius: .4rem;
+    margin-right: 0.5rem;
+}
+
+/* form section */
+form{
+    background: rgb(87,161,213);
+    background: linear-gradient(160deg, rgba(87,161,213,1) 50%, rgba(85,26,219,0.464005585144214) 100%);
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .4rem;
+}
+
+.field{
+    /* display: block; */
+    width: 100%;
+    background-color: var(--body-color);
+    color: white;
+    font-weight: 600;
+    padding: .7rem;
+    border: none;
+    margin-bottom: .7rem;
+    border-radius: .4rem;
+}
+
+.t-area{
+    height: 8rem;
+}
+.send-button{
+    background-color: var(--body-color);
+    color: white;
+    font-weight: 600;
+    padding: .7rem 2rem;
+    border: none;
+    margin-bottom: .7rem;
+    border-radius: .4rem;
+}
+
 
 /* Media querys para pantallas grandes */
 @media (min-width: 769px) {
