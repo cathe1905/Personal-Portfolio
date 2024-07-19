@@ -473,19 +473,41 @@ form{
 }
 
 .field{
-    /* display: block; */
+    position: relative;
+}
+
+.field-input{
     width: 100%;
     background-color: var(--body-color);
     color: white;
-    font-weight: 600;
     padding: .7rem;
     border: none;
     margin-bottom: .7rem;
     border-radius: .4rem;
+    outline: none;
 }
 
+.field label{
+    position: absolute;
+    top: 20%;
+    left: 35px;
+    transform: translate(-50%);
+    pointer-events: none;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+.field-input:focus ~ label, 
+.field-input.not-empty ~ label{
+    top:-8px;
+    left: 35px;
+    font-size: 0.8rem;
+    padding: 0 2px;
+    background: rgb(87,161,213);
+    background: linear-gradient(180deg, rgba(87,161,213,1) 50%, rgba(19,20,50,1) 55%);
+}
 .t-area{
-    height: 8rem;
+    height: 6rem;
 }
 .send-button{
     background-color: var(--body-color);

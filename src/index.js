@@ -137,7 +137,23 @@ function start(){
             }
             
         }
+        console.log(document.querySelectorAll('.field-input'))
+        document.querySelectorAll('.field-input').forEach(input => {
+            input.addEventListener('blur', inputBlur)
+        });
+        
+        function inputBlur(e){
+            console.log(e.target)
+            if (e.target.value.trim() !== "") {
+                e.target.classList.add('not-empty');
+            } else {
+                e.target.classList.remove('not-empty');
+            }
+       
+            if (e.target.value.trim() !== "") {
+                e.target.classList.add('not-empty');
+            }
+        }
 
-    
     }
 

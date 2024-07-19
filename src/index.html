@@ -384,9 +384,20 @@
                 </div>
                 <div class="right">
                     <form>
-                        <input class="field" type="text" id="name" name="name" placeholder="Name">
-                        <input class="field" type="email" id="email" name="email" placeholder="E-mail">
-                        <textarea class="field t-area" id="message" placeholder="Message" name="message"></textarea>
+                        <div class="field">
+                            <input class="field-input" type="text" id="name" name="name">
+                            <label for="">Name</label>
+                        </div>
+                        <div class="field">
+                            <input class="field-input" type="email" id="email" name="email">
+                            <label for="">Email</label>
+                        </div>
+                        
+                        <div class="field">
+                            <textarea class="t-area field-input" id="message" name="message"></textarea>
+                            <label for="">Message</label>
+                        </div>
+                        
                         <button class="send-button" type="submit">Send</button>
                     </form>
                 </div>
