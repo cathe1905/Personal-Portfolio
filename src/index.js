@@ -137,8 +137,13 @@ function start(){
             }
             
         }
-        console.log(document.querySelectorAll('.field-input'))
-        document.querySelectorAll('.field-input').forEach(input => {
+        const inputs= document.querySelectorAll('.field-input')
+        inputs.forEach(input => {
+            if (input.value !== "") {
+                input.classList.add('not-empty');
+            }
+        });
+        inputs.forEach(input => {
             input.addEventListener('blur', inputBlur)
         });
         

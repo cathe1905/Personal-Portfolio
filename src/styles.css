@@ -465,11 +465,11 @@ h1 span.stop-blinking::before {
 
 /* form section */
 form{
-    background: rgb(87,161,213);
-    background: linear-gradient(160deg, rgba(87,161,213,1) 50%, rgba(85,26,219,0.464005585144214) 100%);
+    background: var(--body-color);
     width: 100%;
     padding: 1.5rem;
     border-radius: .4rem;
+    margin-bottom: 3rem;
 }
 
 .field{
@@ -481,10 +481,23 @@ form{
     background-color: var(--body-color);
     color: white;
     padding: .7rem;
-    border: none;
-    margin-bottom: .7rem;
+    border: 2px solid white;
+    margin-bottom: 2rem;
     border-radius: .4rem;
     outline: none;
+}
+
+/* Estilo para inputs autocompletados */
+.field-input:-webkit-autofill {
+    background-color: var(--body-color);
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s; 
+}
+
+/* Para Firefox */
+.field-input:-moz-autofill {
+    background-color: var(--body-color);
+    color: white;
 }
 
 .field label{
@@ -503,8 +516,7 @@ form{
     left: 35px;
     font-size: 0.8rem;
     padding: 0 2px;
-    background: rgb(87,161,213);
-    background: linear-gradient(180deg, rgba(87,161,213,1) 50%, rgba(19,20,50,1) 55%);
+    background: var(--body-color)
 }
 .t-area{
     height: 6rem;
@@ -514,10 +526,35 @@ form{
     color: white;
     font-weight: 600;
     padding: .7rem 2rem;
-    border: none;
+    border: 2px solid white;
     margin-bottom: .7rem;
     border-radius: .4rem;
 }
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    border-top: 0.5px solid white;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+}
+footer .right{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.linkedin{
+    padding: 0;
+}
+
+footer .left{
+    margin-top: .8rem;
+    font-size: .6rem;
+}
+
 
 
 /* Media querys para pantallas grandes */
