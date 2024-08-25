@@ -61,4 +61,20 @@
     .title, .title span{
         font-size: 3.5rem;
     }
+
+    /*  about me */
+    .container-aboutme{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .profile-image{
+        width: 280px;
+    }
+    .div-borde{
+        width: 100%;
+    }
+    .p-about-me{
+        margin-top: 4rem;
+    }
 }
