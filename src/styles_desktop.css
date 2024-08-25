@@ -1,0 +1,64 @@
+:root {
+    --cold-turkey: #d3c0c4;
+    --body-color: #131432;
+    --indigo: #4958c7;
+    --shakespeare: #57a1d5;
+    --east-bay: #50537e;
+    --red-violet: #cd1cb7;
+    --kabul: #674a43;
+    --otro: #2b355a;
+    --thunder: #3b333a;
+    --river-bed: #455660;
+    }
+@media (min-width: 769px) {
+    /* navigation */
+    .menu {
+        display: flex; 
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        justify-content: space-around;
+        align-items: normal;
+    }
+
+    .menu li {
+        width: 120px;
+    }
+
+    .menu li a{
+        padding: 0.5rem 0.7rem;
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+
+    nav{
+        justify-content: center;
+        /* margin-top: 2rem;   */
+    }
+
+    .logo{
+        margin-right: 18%;
+        font-size: 60px;
+    }
+
+    /* arrow down animation */
+    .box-arrows{
+        display: none !important; 
+    }
+
+    header{
+        margin-left: 15%;
+    }
+
+    /*  titles*/
+    .sub-title{
+        font-size: 2.5rem;
+    }
+    .title, .title span{
+        font-size: 3.5rem;
+    }
+}

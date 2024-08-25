@@ -6,6 +6,11 @@
 html {
     scroll-behavior: smooth;
 }
+.container-general{
+    margin: 0 auto;
+    width: auto;
+    max-width: 900px;
+}
 
 :root {
 --cold-turkey: #d3c0c4;
@@ -557,24 +562,5 @@ footer .left{
 
 
 
-/* Media querys para pantallas grandes */
-@media (min-width: 769px) {
-    .menu {
-        display: flex; 
-        flex-direction: row;
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        justify-content: flex-end;
-    }
 
-    .menu li {
-        margin-left: 20px;
-    }
-
-    .menu-toggle {
-        display: none; 
-    }
-}
 
