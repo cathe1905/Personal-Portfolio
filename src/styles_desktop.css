@@ -42,7 +42,7 @@
 
     .logo{
         margin-right: 18%;
-        font-size: 60px;
+        font-size: 50px;
     }
 
     /* arrow down animation */
@@ -77,4 +77,28 @@
     .p-about-me{
         margin-top: 4rem;
     }
+
+    /*  projects */
+
+    .container-project{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between; /* Espacio entre los elementos */
+        gap: 30px; /* Invertir el orden de los elementos */
+    }
+
+    .left, .right{
+        flex: 1;
+    }
+      
+    .container-project:nth-child(odd) {
+        flex-direction: row-reverse; /* Invertir para los padres impares */
+      }
+      
+      .container-project:nth-child(even) {
+        flex-direction: row; /* Mantener orden natural para los padres pares */
+    }
+
+   
+
 }
