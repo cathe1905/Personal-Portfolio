@@ -101,64 +101,108 @@ function start(){
         }
     }
 
-        window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-        handleScroll();
+    handleScroll();
 
-        document.querySelectorAll('.div-read-more').forEach(button => 
-            button.addEventListener('click', readMore)
-        );
+    document.querySelectorAll('.div-read-more').forEach(button => 
+        button.addEventListener('click', readMore)
+    );
         
-        function readMore(e) {
-            e.preventDefault();
+    function readMore(e) {
+        e.preventDefault();
+    
+        const button = e.target.closest('.div-read-more');
+        const projectClass = button.querySelector('img').classList[2];
         
-            const button = e.target.closest('.div-read-more');
-            const projectClass = button.querySelector('img').classList[2];
-            
-            const moreInfoClass = `more-info-${projectClass}`;
-            const moreInfoClass1 = `more-info-${projectClass}1`;
-            const textElement = button.querySelector(`.${projectClass}-p`);
-            const moreInfoElement = document.querySelector(`.${moreInfoClass1}`);
-        
-            moreInfoElement.classList.toggle(moreInfoClass);
+        const moreInfoClass = `more-info-${projectClass}`;
+        const moreInfoClass1 = `more-info-${projectClass}1`;
+        const textElement = button.querySelector(`.${projectClass}-p`);
+        const moreInfoElement = document.querySelector(`.${moreInfoClass1}`);
+    
+        moreInfoElement.classList.toggle(moreInfoClass);
 
-            if(moreInfoElement === document.querySelector('.more-info-all1')){
-                if(moreInfoElement.classList.contains(moreInfoClass)){
-                    textElement.textContent = 'View all projects';
-                    return
-                } else{
-                    textElement.textContent = 'View less projects';
-                    return
-                }
-            } else if(moreInfoElement.classList.contains(moreInfoClass)) {
-                textElement.textContent = 'Read More';
-            } else {
-                textElement.textContent = 'Read Less';
+        if(moreInfoElement === document.querySelector('.more-info-all1')){
+            if(moreInfoElement.classList.contains(moreInfoClass)){
+                textElement.textContent = 'View all projects';
+                return
+            } else{
+                textElement.textContent = 'View less projects';
+                return
             }
-            
+        } else if(moreInfoElement.classList.contains(moreInfoClass)) {
+            textElement.textContent = 'Read More';
+        } else {
+            textElement.textContent = 'Read Less';
         }
-        const inputs= document.querySelectorAll('.field-input')
-        inputs.forEach(input => {
-            if (input.value !== "") {
-                input.classList.add('not-empty');
-            }
-        });
-        inputs.forEach(input => {
-            input.addEventListener('blur', inputBlur)
-        });
         
-        function inputBlur(e){
-            console.log(e.target)
-            if (e.target.value.trim() !== "") {
-                e.target.classList.add('not-empty');
-            } else {
-                e.target.classList.remove('not-empty');
-            }
-       
-            if (e.target.value.trim() !== "") {
-                e.target.classList.add('not-empty');
-            }
-        }
-
     }
+    const inputs= document.querySelectorAll('.field-input')
+    inputs.forEach(input => {
+        if (input.value !== "") {
+            input.classList.add('not-empty');
+        }
+    });
+    inputs.forEach(input => {
+        input.addEventListener('blur', inputBlur)
+    });
+        
+    function inputBlur(e){
+        console.log(e.target)
+        if (e.target.value.trim() !== "") {
+            e.target.classList.add('not-empty');
+        } else {
+            e.target.classList.remove('not-empty');
+        }
+    
+        if (e.target.value.trim() !== "") {
+            e.target.classList.add('not-empty');
+        }
+    }
+
+    function modal(){
+        // Obtener todos los botones que abren las modales
+        const openModalButtons = document.querySelectorAll('.openModal');
+        // Obtener todos los botones de cierre de las modales
+        const closeButtons = document.querySelectorAll('.close');
+        console.log(closeButtons);
+        // Obtener todos los contenedores de las modales
+        const modals = document.querySelectorAll('.modal');
+        const body = document.body; // Obtener el body
+
+        // Agregar eventos de clic a los botones de abrir modal
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = "block";
+                body.classList.add("modal-open"); // Evitar el desplazamiento del body
+            });
+        });
+
+        // Agregar eventos de clic a los botones de cerrar modal
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('funciona la X')
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = "none";
+                body.classList.remove("modal-open"); // Permitir el desplazamiento del body
+            });
+        });
+
+        // Cerrar la modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    body.classList.remove("modal-open"); // Permitir el desplazamiento del body
+                }
+            });
+        }
+    }
+    modal();
+
+
+}
 

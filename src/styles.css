@@ -560,7 +560,48 @@ footer .left-f{
     font-size: .6rem;
 }
 
+.modal {
+    display: none; /* Ocultar modal por defecto */
+    position: fixed; /* Mantenerla fija en la pantalla */
+    z-index: 1; /* Mostrarla sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%; /* Ocupa toda la pantalla */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    overflow: auto; /* Habilitar desplazamiento si el contenido es largo */
+}
 
+/* Contenedor del contenido de la modal */
+.modal-content {
+    background-color: var(--cold-turkey);
+    margin: 15% auto; /* Centrar vertical y horizontalmente */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%; /* Ancho de la modal */
+    max-width: 600px; /* Ancho máximo */
+    text-align: center;
+    color: var(--body-color);
+}
+
+/* Estilo del botón de cierre */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
 
 
 
