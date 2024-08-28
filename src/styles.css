@@ -417,26 +417,26 @@ h1 span.stop-blinking::before {
 
 .izquierda {
     position: absolute;
-    top: -60px;
+    top: -80px;
     left: 0px;
-    width: 80px; 
-    height: 150px; 
+    width: 120px; 
+    height: 200px; 
     background: rgb(85,26,219);
     background: linear-gradient(120deg, rgba(85,26,219,0.7749299548921131) 0%, rgba(87,161,213,1) 100%);
     -moz-border-radius: 0 100px 100px 0;
     -webkit-border-radius: 0 100px 100px 0;
-    border-radius: 0 100px 100px 0;
+    border-radius: 0 120px 120px 0;
     opacity: 0.5;
 }
 
 .derecha{
     position: absolute;
-    width: 80px; 
-    height: 150px; 
+    width: 120px; 
+    height: 200px; 
     background: rgb(85,26,219);
     background: linear-gradient(120deg, rgba(85,26,219,0.7749299548921131) 0%, rgba(87,161,213,1) 100%);
-    border-radius: 100px 0 0 100px;
-    top: -60px;
+    border-radius: 120px 0 0 120px;
+    top: -80px;
     right: 0px;
     opacity: 0.5;
 }
@@ -505,8 +505,8 @@ form{
 
 .field label{
     position: absolute;
-    top: 20%;
-    left: 35px;
+    top: 18%;
+    left: 45px;
     transform: translate(-50%);
     pointer-events: none;
     font-size: 0.9rem;
@@ -524,6 +524,9 @@ form{
 .t-area{
     height: 6rem;
 }
+textarea::placeholder {
+    padding-left: 10px;
+}
 .send-button{
     background-color: var(--body-color);
     color: white;
@@ -537,11 +540,16 @@ form{
 /* footer */
 footer{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-content: center;
+    /* align-content: center; */
     border-top: 0.5px solid white;
     margin-bottom: 1rem;
     padding-top: 1.5rem;
+}
+footer > * {
+    flex: 1; /* Hacer que todos los elementos hijos tomen el mismo ancho */
+    text-align: center; /* Centrar el contenido dentro de cada elemento */
 }
 footer .right{
     display: flex;

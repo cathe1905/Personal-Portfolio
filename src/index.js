@@ -110,7 +110,7 @@ function start(){
         
     function viewAllProjects(e) {
         e.preventDefault();
-        
+
         const textElement= document.querySelector('.all-p');
         const allProjects= document.querySelector('.all-projects');
         allProjects.classList.toggle('more-info-all');
@@ -190,6 +190,35 @@ function start(){
     }
     modal();
 
+    function sendEmail(){
+        const btn = document.getElementById('button');
+        const name=document.querySelector('#from_name');
+        const email= document.querySelector('#email');
+        const message= document.querySelector('#message')
+
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.value = 'Sending...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_s1crxcl';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                btn.value = 'Send Email';
+                alert('Sent!');
+                this.reset()
+                }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+                });
+
+        });
+    }
+
+    sendEmail();
 
 }
 

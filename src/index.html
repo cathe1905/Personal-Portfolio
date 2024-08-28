@@ -455,6 +455,14 @@
                     <p class="p-icono" >Python</p>
                 </div>
                 <div class="div-icon">
+                    <img class="icon" src="img/php.png" alt="PHP image">
+                    <p class="p-icono">PHP</p>
+                </div>
+                <div class="div-icon">
+                    <img class="icon" src="img/typescript.png" alt="typescript image">
+                    <p class="p-icono">Typescript</p>
+                </div>
+                <div class="div-icon">
                     <img class="icon" src="img/flask.png" alt="flask image">
                     <p class="p-icono" >Flask</p>
                 </div>
@@ -488,7 +496,7 @@
         <section id="contact" >
             <h2 class="contact-t">CONTACT</h2>
             <div class="container">
-                <div class="left">
+                <div class="left-contacts">
                     <h2 class="drop">Drop me a message</h2>
                     <div class="contact-info">
                         <div class="info-item">
@@ -505,23 +513,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="right">
-                    <form>
+                <div class="right-contacts">
+                    <form id="form">
                         <div class="field">
-                            <input class="field-input" type="text" id="name" name="name">
-                            <label for="">Name</label>
+                            <input class="field-input" type="text" name="from_name" id="from_name">
+                            <label for="from_name">Name</label>
                         </div>
                         <div class="field">
-                            <input class="field-input" type="email" id="email" name="email">
-                            <label for="">Email</label>
-                        </div>
-                        
-                        <div class="field">
-                            <textarea class="t-area field-input" id="message" name="message"></textarea>
-                            <label for="">Message</label>
+                            <input class="field-input" type="email" name="email" id="email">
+                            <label for="email">Email</label>
                         </div>
                         
-                        <button class="send-button" type="submit">Send</button>
+                        <div class="field">
+                            <textarea class="t-area field-input" name="message" id="message"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        
+                        <input class="send-button" type="submit" id="button" value="Send" >  
                     </form>
                 </div>
             </div>
@@ -541,6 +549,8 @@
     </div>
 
 
-    <script src="index.js"></script>   
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('IiryIhs9zrd-By2WC')</script>   
 </body>
 </html>

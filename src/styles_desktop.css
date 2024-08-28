@@ -107,6 +107,42 @@
     .view-code-btn{
         font-size: 1rem;
     }
-   
 
+    /* contact section */
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+
+    form{
+        width: 400px;
+    }
+
+    /* footer */
+    
+    footer .left-f{
+        font-size: .8rem;
+    }
+
+}
+
+@media (min-width: 1000px){
+    .izquierda {
+        top: -140px; /* Ajusta la posición superior */
+        left: 0px;
+        width: 160px; /* Aumenta el ancho para mantener la proporción */
+        height: 340px; /* Aumenta el alto proporcionalmente */
+        border-radius: 0 160px 160px 0; /* Ajusta el border-radius para el nuevo tamaño */
+    }
+    
+    .derecha{
+        width: 160px; /* Aumenta el ancho para mantener la proporción */
+        height: 340px;
+        border-radius: 160px 0 0 160px;
+        top: -140px;
+        right: 0px;
+    }
 }
