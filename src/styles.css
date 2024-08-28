@@ -367,9 +367,7 @@ h1 span.stop-blinking::before {
     font-weight: 300;
     color: white;
 }
-.more-info-taxi, .more-info-teresa, .more-info-chat, 
-.more-info-text, .more-info-portfolio, .more-info-movie,
-.more-info-trivia, .more-info-guess, .more-info-all {
+.more-info-all {
     display: none;
 }
 
@@ -560,26 +558,36 @@ footer .left-f{
     font-size: .6rem;
 }
 
+/* modal */
 .modal {
-    display: none; /* Ocultar modal por defecto */
-    position: fixed; /* Mantenerla fija en la pantalla */
-    z-index: 1; /* Mostrarla sobre otros elementos */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Ocupa toda la pantalla */
-    height: 100%; /* Ocupa toda la pantalla */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    overflow: auto; /* Habilitar desplazamiento si el contenido es largo */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    overflow: auto; 
+}
+
+.modalOpen{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.openModal{
+    cursor: pointer;
 }
 
 /* Contenedor del contenido de la modal */
 .modal-content {
     background-color: var(--cold-turkey);
-    margin: 15% auto; /* Centrar vertical y horizontalmente */
+    margin: 15% auto; 
     padding: 20px;
     border-radius: 8px;
-    width: 80%; /* Ancho de la modal */
-    max-width: 600px; /* Ancho máximo */
+    width: 80%; 
+    max-width: 600px;
     text-align: center;
     color: var(--body-color);
 }
@@ -601,6 +609,27 @@ footer .left-f{
 
 body.modal-open {
     overflow: hidden;
+}
+
+.modal-p{
+    font-size: .9rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+.modal-buttons{
+    margin-top: 1.5rem;
+}
+.view-code-btn{
+    padding: .3rem .5rem;
+    border-radius: .4rem;
+    color: var(--body-color);
+    font-weight: 300;
+    font-size: 0.8rem;
+    border: 2px solid rgba(85,26,219,1);
+    background-color: var(--cold-turkey);
+    font-weight: 900;
+    cursor: pointer;
 }
 
 

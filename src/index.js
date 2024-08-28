@@ -105,36 +105,23 @@ function start(){
 
     handleScroll();
 
-    document.querySelectorAll('.div-read-more').forEach(button => 
-        button.addEventListener('click', readMore)
-    );
+    const button = document.querySelector('.view-all');
+    button.addEventListener('click', viewAllProjects)
         
-    function readMore(e) {
+    function viewAllProjects(e) {
         e.preventDefault();
-    
-        const button = e.target.closest('.div-read-more');
-        const projectClass = button.querySelector('img').classList[2];
         
-        const moreInfoClass = `more-info-${projectClass}`;
-        const moreInfoClass1 = `more-info-${projectClass}1`;
-        const textElement = button.querySelector(`.${projectClass}-p`);
-        const moreInfoElement = document.querySelector(`.${moreInfoClass1}`);
-    
-        moreInfoElement.classList.toggle(moreInfoClass);
-
-        if(moreInfoElement === document.querySelector('.more-info-all1')){
-            if(moreInfoElement.classList.contains(moreInfoClass)){
+        const textElement= document.querySelector('.all-p');
+        const allProjects= document.querySelector('.all-projects');
+        allProjects.classList.toggle('more-info-all');
+       
+            if(allProjects.classList.contains('more-info-all')){
                 textElement.textContent = 'View all projects';
                 return
             } else{
                 textElement.textContent = 'View less projects';
                 return
             }
-        } else if(moreInfoElement.classList.contains(moreInfoClass)) {
-            textElement.textContent = 'Read More';
-        } else {
-            textElement.textContent = 'Read Less';
-        }
         
     }
     const inputs= document.querySelectorAll('.field-input')
@@ -165,7 +152,7 @@ function start(){
         const openModalButtons = document.querySelectorAll('.openModal');
         // Obtener todos los botones de cierre de las modales
         const closeButtons = document.querySelectorAll('.close');
-        console.log(closeButtons);
+
         // Obtener todos los contenedores de las modales
         const modals = document.querySelectorAll('.modal');
         const body = document.body; // Obtener el body
@@ -175,7 +162,7 @@ function start(){
             button.addEventListener('click', function() {
                 const modalId = this.getAttribute('data-modal');
                 const modal = document.getElementById(modalId);
-                modal.style.display = "block";
+                modal.classList.add('modalOpen');
                 body.classList.add("modal-open"); // Evitar el desplazamiento del body
             });
         });
@@ -183,10 +170,10 @@ function start(){
         // Agregar eventos de clic a los botones de cerrar modal
         closeButtons.forEach(button => {
             button.addEventListener('click', function() {
-                console.log('funciona la X')
+       
                 const modalId = this.getAttribute('data-modal');
                 const modal = document.getElementById(modalId);
-                modal.style.display = "none";
+                modal.classList.remove('modalOpen');
                 body.classList.remove("modal-open"); // Permitir el desplazamiento del body
             });
         });

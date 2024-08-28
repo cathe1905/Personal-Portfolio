@@ -99,6 +99,14 @@
         flex-direction: row; /* Mantener orden natural para los padres pares */
     }
 
+    /* modal */
+    .modal-p{
+        font-size: 1rem;
+    }
+
+    .view-code-btn{
+        font-size: 1rem;
+    }
    
 
 }
