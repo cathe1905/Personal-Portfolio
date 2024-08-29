@@ -42,16 +42,6 @@ To clone and run this project locally, follow these steps:
 
 3. Open the `index.html` file in your browser to view the project in action.
 
-## 📧 Contact
 
-If you have any questions or comments, feel free to reach out to me:
-
-- **Name**: Catherin Romero
-- **Email**: your-email@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
