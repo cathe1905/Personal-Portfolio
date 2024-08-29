@@ -55,6 +55,23 @@ function start(){
         top: 0,
         behavior: 'auto'
     });
+
+    function backgroundAnimation(){
+        const animation = document.getElementById('animation');
+
+        window.addEventListener('scroll', () => {
+        const animationPosition = animation.getBoundingClientRect();
+        
+        // Verifica si la sección está fuera del viewport (arriba o abajo)
+        if (animationPosition.top >= window.innerHeight || animationPosition.bottom <= 0) {
+            animation.classList.remove('box');  // Elimina la clase cuando no está visible
+        } else {
+            animation.classList.add('box');     // Agrega la clase cuando está visible (opcional)
+        }
+        });
+
+    }
+    backgroundAnimation();
     
     function titleAnimation(){
         const dynamicText= document.querySelector("h1 span");
@@ -135,7 +152,7 @@ function start(){
     });
         
     function inputBlur(e){
-        console.log(e.target)
+
         if (e.target.value.trim() !== "") {
             e.target.classList.add('not-empty');
         } else {
@@ -190,35 +207,45 @@ function start(){
     }
     modal();
 
-    function sendEmail(){
+    document.getElementById('form').addEventListener('submit', sendEmail);
+    function sendEmail(e){
+        e.preventDefault();
         const btn = document.getElementById('button');
-        const name=document.querySelector('#from_name');
-        const email= document.querySelector('#email');
-        const message= document.querySelector('#message')
+        const name=document.querySelector('#from_name').value;
+        const email= document.querySelector('#email').value;
+        const message= document.querySelector('#message').value;
+        const divError= document.querySelector('#error');
+        const validacon= [name, email, message];
+        
+        if(validacon.every(field => field !== '')){
+            btn.value = 'Sending...';
 
-        document.getElementById('form')
-        .addEventListener('submit', function(event) {
-        event.preventDefault();
+            const serviceID = 'default_service';
+            const templateID = 'template_s1crxcl';
+    
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                    btn.value = 'Send Email';
+                    Swal.fire({
+                        position: "center-center",
+                        icon: "success",
+                        title: "Your email has been sent",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                    this.reset();
+                    divError.classList.add('error');
+                    }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                    });
+        } else{
+            divError.classList.remove('error');
+        }
 
-        btn.value = 'Sending...';
-
-        const serviceID = 'default_service';
-        const templateID = 'template_s1crxcl';
-
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                btn.value = 'Send Email';
-                alert('Sent!');
-                this.reset()
-                }, (err) => {
-                btn.value = 'Send Email';
-                alert(JSON.stringify(err));
-                });
-
-        });
     }
 
-    sendEmail();
+  
 
 }
 

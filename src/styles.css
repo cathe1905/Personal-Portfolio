@@ -472,7 +472,7 @@ form{
     width: 100%;
     padding: 1.5rem;
     border-radius: .4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .field{
@@ -535,6 +535,20 @@ textarea::placeholder {
     border: 2px solid white;
     margin-bottom: .7rem;
     border-radius: .4rem;
+}
+
+.error{
+    display: none;
+}
+.div-error{
+    background-color: rgb(175, 32, 32);
+    padding: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+.div-error p{
+    color: white;
+    font-weight: 700;
+    text-align: center;
 }
 
 /* footer */

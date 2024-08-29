@@ -37,7 +37,7 @@
     <header class="titles">
         <h2 class="roboto-regular sub-title">¡Hi there!</h2>
         <h1 class="spectral-extrabold title">I'm <span></span></h1>
-        <div class="box">
+        <div id="animation" class="box">
             <ul>
                 <li></li>
                 <li></li>
@@ -307,7 +307,7 @@
                 <div class="modal-content">
                     <span class="close" data-modal="modal3">&times;</span>
                     <h2>Features</h2>
-                    <p class="modal-p">Features:<br>
+                    <p class="modal-p">
                         - Movie Filtering: Allows users to filter movies by genre to tailor their viewing experience.<br>
                         - Sorting Options: Provides functionality to sort movies in both ascending and descending order for better organization.<br>
                         - Detailed Movie View: Users can access detailed information about each movie on a separate view for in-depth content.<br>
@@ -516,21 +516,25 @@
                 <div class="right-contacts">
                     <form id="form">
                         <div class="field">
-                            <input class="field-input" type="text" name="from_name" id="from_name">
+                            <input class="field-input" type="text" name="from_name" id="from_name" required>
                             <label for="from_name">Name</label>
                         </div>
                         <div class="field">
-                            <input class="field-input" type="email" name="email" id="email">
+                            <input class="field-input" type="email" name="email" id="email" required>
                             <label for="email">Email</label>
                         </div>
                         
                         <div class="field">
-                            <textarea class="t-area field-input" name="message" id="message"></textarea>
+                            <textarea class="t-area field-input" name="message" id="message" required></textarea>
                             <label for="message">Message</label>
                         </div>
                         
                         <input class="send-button" type="submit" id="button" value="Send" >  
                     </form>
+
+                    <div id="error" class="div-error error">
+                        <p>All fields are required</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -550,6 +554,7 @@
 
 
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">emailjs.init('IiryIhs9zrd-By2WC')</script>   
 </body>
