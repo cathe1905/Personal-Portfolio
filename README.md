@@ -26,21 +26,6 @@ This project is an interactive portfolio that includes:
 - **JavaScript**: Interactivity and animations.
 - **Git**: Version control.
 
-## 🌟 Installation
-
-To clone and run this project locally, follow these steps:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/your-repository.git
-    ```
-
-2. Navigate to the project directory:
-    ```bash
-    cd your-repository
-    ```
-
-3. Open the `index.html` file in your browser to view the project in action.
 
 
 
