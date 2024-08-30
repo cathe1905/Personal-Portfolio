@@ -62,11 +62,11 @@ function start(){
         window.addEventListener('scroll', () => {
         const animationPosition = animation.getBoundingClientRect();
         
-        // Verifica si la sección está fuera del viewport (arriba o abajo)
+        
         if (animationPosition.top >= window.innerHeight || animationPosition.bottom <= 0) {
-            animation.classList.remove('box');  // Elimina la clase cuando no está visible
+            animation.classList.remove('box');  
         } else {
-            animation.classList.add('box');     // Agrega la clase cuando está visible (opcional)
+            animation.classList.add('box'); 
         }
         });
 
@@ -165,42 +165,42 @@ function start(){
     }
 
     function modal(){
-        // Obtener todos los botones que abren las modales
+     
         const openModalButtons = document.querySelectorAll('.openModal');
-        // Obtener todos los botones de cierre de las modales
+     
         const closeButtons = document.querySelectorAll('.close');
 
-        // Obtener todos los contenedores de las modales
+       
         const modals = document.querySelectorAll('.modal');
         const body = document.body; // Obtener el body
 
-        // Agregar eventos de clic a los botones de abrir modal
+        
         openModalButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const modalId = this.getAttribute('data-modal');
                 const modal = document.getElementById(modalId);
                 modal.classList.add('modalOpen');
-                body.classList.add("modal-open"); // Evitar el desplazamiento del body
+                body.classList.add("modal-open"); 
             });
         });
 
-        // Agregar eventos de clic a los botones de cerrar modal
+       
         closeButtons.forEach(button => {
             button.addEventListener('click', function() {
        
                 const modalId = this.getAttribute('data-modal');
                 const modal = document.getElementById(modalId);
                 modal.classList.remove('modalOpen');
-                body.classList.remove("modal-open"); // Permitir el desplazamiento del body
+                body.classList.remove("modal-open"); 
             });
         });
 
-        // Cerrar la modal si se hace clic fuera del contenido
+        
         window.onclick = function(event) {
             modals.forEach(modal => {
                 if (event.target == modal) {
                     modal.style.display = "none";
-                    body.classList.remove("modal-open"); // Permitir el desplazamiento del body
+                    body.classList.remove("modal-open"); 
                 }
             });
         }
@@ -208,6 +208,7 @@ function start(){
     modal();
 
     document.getElementById('form').addEventListener('submit', sendEmail);
+    
     function sendEmail(e){
         e.preventDefault();
         const btn = document.getElementById('button');

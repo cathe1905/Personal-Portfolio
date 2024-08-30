@@ -37,7 +37,7 @@
 
     nav{
         justify-content: center;
-        /* margin-top: 2rem;   */
+        border: none;
     }
 
     .logo{

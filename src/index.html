@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_desktop.css">
 </head>
-<body  class="roboto-regular">
+<body id="logo" class="roboto-regular">
     <nav>
-            <div class="logo cinzel-decorative-regular">CR</div>
+            <a href="#logo" class="logo cinzel-decorative-regular">CR</a>
             <div class="menu-toggle">
                 <span class="line1__bars-menu"></span>
                 <span class="line2__bars-menu"></span>
@@ -65,7 +65,8 @@
                 </div>
                 <div class="p-about-me">
                     <p>Hello! I'm Catherin Romero, a passionate technology enthusiast with experience in both frontend and 
-                        backend projects. My focus is primarily on backend development and databases, specializing in projects 
+                        backend projects.</p>
+                    <p>My focus is primarily on backend development and databases, specializing in projects 
                         using JavaScript and Python, including frameworks like React and Flask. I take pride in developing a 
                         significant RESTful API project.</p>
                         
@@ -76,6 +77,7 @@
                     <div class="buttons-resume">
                         <a href="https://docs.google.com/document/d/1snrOgNr04g8gB_iZRmm6fh0EA3T1sfQIqLy__GiWhF0/edit" class="resume-en">ENGLISH RESUME</a>
                         <a href="https://docs.google.com/document/d/13KXpruvfZCuRYfQLcdgwAVQALjs5PIHU_iwefGx3u0U/edit" class="resume-sp">SPANISH RESUME</a>
+                        <a href="https://github.com/cathe1905" ><img class="icon-contact"  src="img/github-removebg-preview.png" alt="github"></a>
                     </div>
 
                 </div>
@@ -108,40 +110,39 @@
             <div class="container-project">
                 <div class="right">
                     <h3 class="title-project">Project 2</h3>
-                    <h3 class="name-project">Teresa Store</h3>
-                    <p class="p-project">The E-commerce Shopping Cart Project is a dynamic web application that utilizes the Fake Store API to showcase a variety of products. Users can easily browse through items, filter by categories, and add products to their shopping cart. The application features persistent storage using localStorage, ensuring that cart contents remain intact across sessions.</p>
+                    <h3 class="name-project">Movie Catalog Application</h3>
+                    <p class="p-project">The Movie Catalog Application is a React-based web application that provides an interactive 
+                        and dynamic catalog of movies. It features components such as Navbar, Carousel, and PaginationComponent 
+                        to enhance user experience. Users can filter movies by genre, sort them in ascending or descending order, 
+                        and view detailed information about each film</p>
                 
                     <a class="div-read-more openModal" data-modal="modal2">
-                        <img id="Teresa" class="arrow-read read-more-a teresa" src="img/sticker-png-arrows-icon-double-arrow-icon-doublechevronup-icon-line-material-property-logo-symbol-removebg-preview.png" alt="arrow for read more">
-                        <p id="Teresa" class="read-more-a teresa-p">Read more</p>
+                        <img class="arrow-read div-read-more movie" src="img/sticker-png-arrows-icon-double-arrow-icon-doublechevronup-icon-line-material-property-logo-symbol-removebg-preview.png" alt="arrow for read more">
+                        <p class="read-more-a movie-p">Read more</p>
                     </a>
                 </div>
-                <div class="left borde-img-project">
-                    <a href="https://github.com/cathe1905/Teresa-Store"><img class="img-project" src="img/teresa.png" alt="Project 2 Image"></a>
-                    <div class="borde"></div>
-                </div>
+                    <div class="right borde-img-project">
+                        <a href="https://dev-014-movie-challenge-fw-swart.vercel.app/"><img class="img-project" src="img/movies.png" alt="Project 5 Image"></a>
+                        <div class="borde"></div>
+                    </div>
             </div>
 
             <div class="container-project">
                 <div class="left">
                     <h3 class="title-project">Project 3</h3>
-                    <h3 class="name-project">Movie Catalog Application</h3>
-                    <p class="p-project">The Movie Catalog Application is a React-based web application that provides an interactive 
-                        and dynamic catalog of movies. It features components such as Navbar, Carousel, and PaginationComponent 
-                        to enhance user experience. Users can filter movies by genre, sort them in ascending or descending order, 
-                        and view detailed information about each film. The application ensures a smooth and informative experience 
-                        by handling data loading and error states effectively and includes comprehensive testing of each component 
-                        using Jest.</p>
+                    <h3 class="name-project">Teresa Store</h3>
+                    <p class="p-project">The E-commerce Shopping Cart Project is a dynamic web application that utilizes the Fake Store API to showcase a variety of products. Users can easily browse through items, filter by categories, and add products to their shopping cart. The application features persistent storage using localStorage, ensuring that cart contents remain intact across sessions.</p>
                 
                     <a class="div-read-more openModal" data-modal="modal3">
-                        <img class="arrow-read div-read-more movie" src="img/sticker-png-arrows-icon-double-arrow-icon-doublechevronup-icon-line-material-property-logo-symbol-removebg-preview.png" alt="arrow for read more">
-                        <p class="read-more-a movie-p">Read more</p>
+                        <img id="Teresa" class="arrow-read read-more-a teresa" src="img/sticker-png-arrows-icon-double-arrow-icon-doublechevronup-icon-line-material-property-logo-symbol-removebg-preview.png" alt="arrow for read more">
+                        <p id="Teresa" class="read-more-a teresa-p">Read more</p>
                     </a>
                 </div>
-                <div class="right borde-img-project">
-                    <a href="https://dev-014-movie-challenge-fw-swart.vercel.app/"><img class="img-project" src="img/movies.png" alt="Project 5 Image"></a>
-                    <div class="borde"></div>
-                </div>
+                    <div class="left borde-img-project">
+                        <a href="https://github.com/cathe1905/Teresa-Store"><img class="img-project" src="img/teresa.png" alt="Project 2 Image"></a>
+                        <div class="borde"></div>
+                    </div>
+
             </div>
             
         </section>
@@ -274,10 +275,35 @@
                 </div>
             </div>
 
-            <!-- modal teresa store -->
+            <!-- modal Movie challenge -->
             <div id="modal2" class="modal">
                 <div class="modal-content">
                     <span class="close" data-modal="modal2">&times;</span>
+                    <h2>Features</h2>
+                    <p class="modal-p">
+                        - Movie Filtering: Allows users to filter movies by genre to tailor their viewing experience.<br>
+                        - Sorting Options: Provides functionality to sort movies in both ascending and descending order for better organization.<br>
+                        - Detailed Movie View: Users can access detailed information about each movie on a separate view for in-depth content.<br>
+                        - Loading and Error Handling: Shows a loading spinner during data fetching and displays error messages if issues arise, keeping users informed.<br>
+                        - Pagination: Facilitates navigation through movie pages, with page numbers managed via URL parameters for easy access.<br>
+                        - Component Testing: Ensures the reliability and functionality of each component through Jest testing.<br>
+                    
+                    Technologies Used:
+                    
+                        React, TypeScript, React-Bootstrap, CSS, React Router, Jest.
+                    </p>
+                    <div class="modal-buttons">
+                        <a href="https://github.com/cathe1905/DEV014-movie-challenge-fw" class="view-code-btn">View Code</a>
+                        <a href="https://dev-014-movie-challenge-fw-swart.vercel.app/" class="view-code-btn">See Demo</a>
+                    </div> 
+                </div>
+            </div>
+
+
+            <!-- modal teresa store -->
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal="modal3">&times;</span>
                     <h2>Features</h2>
                     <p class="modal-p">
                         - Dynamic Product Display: Products are fetched from the Fake Store API and displayed on the page using dynamically created HTML elements. <br>
@@ -302,30 +328,7 @@
                 </div>
             </div>
 
-            <!-- modal Movie challenge -->
-            <div id="modal3" class="modal">
-                <div class="modal-content">
-                    <span class="close" data-modal="modal3">&times;</span>
-                    <h2>Features</h2>
-                    <p class="modal-p">
-                        - Movie Filtering: Allows users to filter movies by genre to tailor their viewing experience.<br>
-                        - Sorting Options: Provides functionality to sort movies in both ascending and descending order for better organization.<br>
-                        - Detailed Movie View: Users can access detailed information about each movie on a separate view for in-depth content.<br>
-                        - Loading and Error Handling: Shows a loading spinner during data fetching and displays error messages if issues arise, keeping users informed.<br>
-                        - Pagination: Facilitates navigation through movie pages, with page numbers managed via URL parameters for easy access.<br>
-                        - Component Testing: Ensures the reliability and functionality of each component through Jest testing.<br>
-                    
-                    Technologies Used:
-                    
-                        React, TypeScript, React-Bootstrap, CSS, React Router, Jest.
-                    </p>
-                    <div class="modal-buttons">
-                        <a href="https://github.com/cathe1905/DEV014-movie-challenge-fw" class="view-code-btn">View Code</a>
-                        <a href="https://dev-014-movie-challenge-fw-swart.vercel.app/" class="view-code-btn">See Demo</a>
-                    </div> 
-                </div>
-            </div>
-
+            
             <!-- modal portfolio -->
             <div id="modal4" class="modal">
                 <div class="modal-content">
